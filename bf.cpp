@@ -1,18 +1,14 @@
 #include <iostream>
 #include <bits/stdc++.h>
 
+
 using namespace std;
-
-
-
-
-
 
 
 int main() {
   
   //program instructions
-  string init = ">++++++++[<+++++++++>-]<.>++++[<+++++++>-]<+.+++++++..+++.>>++++++[<+++++++>-]<++------------>++++++[<+++++++++>-]<+<+++-------------->>>++++[<++++++++>-]<+" ;
+  string init = ">++++++++[<+++++++++>-]<.>++++[<+++++++>-]<+.+++++++..+++.>>++++++[<+++++++>-]<++.------------.>++++++[<+++++++++>-]<+.<.+++.------.--------.>>>++++[<++++++++>-]<+." ;
   int len = init.length();
 
   // memory allocated to bf
@@ -49,6 +45,8 @@ int main() {
   //stores bmap location
   int nav = 0;
   
+  char out;
+
   //iterates through input
 
   for(int n=0 ;n<len;n++) {
@@ -65,11 +63,15 @@ int main() {
       case '+':
         mem[point]++;
         break;
+      
       case '-':
         mem[point]--;
         break;
-
-
+      case '.':
+        out = mem[point];
+        cout << out;  
+        break;
+    
       //altering the n value which corresponds to location in the program instructions
       //loop behaviour
 
@@ -95,12 +97,5 @@ int main() {
   
   }
 
-  
-for (int i = 0; i < mem.size();i++) {
-    cout << "<";
-    cout << mem[i];
-    cout << ">";
-    cout << "\n";
-  }
   
 }
