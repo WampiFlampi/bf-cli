@@ -1,2 +1,14 @@
 # bf-arch
-brainfuck for arch linux, for now its only the basic logic, in the future I'll make a graphical interface using ncurses
+brainfuck for arch linux
+![src](https://github.com/WampiFlampi/source/blob/main/bf-arch.PNG)
+
+Graphical interface development is offically underway
+
+```git clone https://github.com/WampiFlampi/bf-arch```
+
+```cd /bf-arch```
+
+```make```
+
+
+```./bin```
