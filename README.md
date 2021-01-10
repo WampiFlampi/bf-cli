@@ -2,8 +2,9 @@
 
 ![src](https://github.com/WampiFlampi/source/blob/main/bf-arch.PNG)
 
-brainfuck for arch linux
-Graphical interface development is offically underway
+brainfuck for arch linux,
+
+graphical interface development is offically underway
 
 ```git clone https://github.com/WampiFlampi/bf-arch```
 
