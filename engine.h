@@ -13,17 +13,23 @@ vector<int> mem(10,0);
 int point = 0;
 //stores bmap location
 int nav = 0;
-char out;
 
+
+//controls speed of animation
 int rr = 40*1000;
 
 void iterate(vector<int> bmap,int len, char sc[]) {
-
+  
+  //ncurses initialization
   init();
-   
+  
+  //native out for bf
+  char out;
+	
+	
   for(int n=0 ;n<len;n++) {
   
-
+    //sc[] is the bf instructions
     switch(sc[n]) {
 			
       //defining languauge rules
@@ -61,7 +67,7 @@ void iterate(vector<int> bmap,int len, char sc[]) {
 		break;	
       }
     display(mem,point);
-	usleep(rr);	
+    usleep(rr);	
   }
   end();
 }
