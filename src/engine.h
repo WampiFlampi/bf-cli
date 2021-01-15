@@ -2,7 +2,8 @@
 #include <bits/stdc++.h>
 #include <unistd.h>
 
-#include "graphics.h"
+#include "graphics/graphics.h"
+
 
 using namespace std;
 
@@ -18,15 +19,21 @@ int nav = 0;
 //controls speed of animation
 int rr = 40*1000;
 
+
+
 void iterate(vector<int> bmap,int len, char sc[]) {
   
   //ncurses initialization
   init();
-  
+  Window main(5,5,45,2);
+
+  Window t(0,0,20,2);
+
   //native out for bf
   char out;
 	
-	
+  title(t);
+ 
   for(int n=0 ;n<len;n++) {
   
     //sc[] is the bf instructions
@@ -66,7 +73,7 @@ void iterate(vector<int> bmap,int len, char sc[]) {
         }
 		break;	
       }
-    display(mem,point);
+	display(mem,point,main);
     usleep(rr);	
   }
   end();

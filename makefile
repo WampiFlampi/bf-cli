@@ -1,6 +1,6 @@
 all: bin
 
-bin: main.cpp engine.h graphics.h
-	g++ -lncurses main.cpp engine.h graphics.h -o bin
+bin: main.cpp src src/graphics
+	g++ -lncurses main.cpp -o bin
 
 
