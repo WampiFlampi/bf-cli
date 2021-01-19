@@ -21,7 +21,7 @@ int rr = 40*1000;
 
 
 
-void iterate(vector<int> bmap,int len, char sc[]) {
+void iterate(int size, char sc[]) {
   
   //ncurses initialization
   init();
@@ -33,6 +33,27 @@ void iterate(vector<int> bmap,int len, char sc[]) {
   char out;
 	
   title(t);
+	
+  //map bracket location
+  vector<int> bmap;
+
+  for(int n=0 ;n<len;n++) {
+    switch(source[n]) {
+      
+      case '[':
+        bmap.push_back(n);
+        break;
+      
+      case ']':
+        bmap.push_back(n);
+        break;
+      
+      default:
+        break;
+
+  }
+  }
+
  
   for(int n=0 ;n<len;n++) {
   
