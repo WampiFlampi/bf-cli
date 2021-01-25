@@ -27,10 +27,11 @@ int main(int argc,char *argv[]) {
 
   //iterates through input
 
-  iterate(bmap, len, source);
+  iterate(size, source);
 
   
   cout << endl;
+  cout << size;
   return 0;
   
 }

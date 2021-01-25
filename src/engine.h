@@ -21,7 +21,7 @@ int rr = 40*1000;
 
 
 
-void iterate(int size, char sc[]) {
+void iterate(int len, char sc[]) {
   
   //ncurses initialization
   init();
@@ -38,7 +38,7 @@ void iterate(int size, char sc[]) {
   vector<int> bmap;
 
   for(int n=0 ;n<len;n++) {
-    switch(source[n]) {
+    switch(sc[n]) {
       
       case '[':
         bmap.push_back(n);
