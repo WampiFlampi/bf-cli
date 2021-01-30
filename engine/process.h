@@ -11,7 +11,7 @@ int nav = 0;
 int n = 0;
 char out;
 
-void iterate(char sc[],vector<int> bmap, Window win, Window src) {
+void iterate(char sc[],vector<int> bmap, Window win) {
     
     //sc[] is the bf instructions
     switch(sc[n]) {
@@ -50,7 +50,8 @@ void iterate(char sc[],vector<int> bmap, Window win, Window src) {
         }
 		break;	
       }
-	display(mem,point,win,src);
+
+	render(mem,point,win);
     n++;	
   }
  

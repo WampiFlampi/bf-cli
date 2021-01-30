@@ -28,28 +28,64 @@ void proc(int len, char sc[]) {
 	
   //map bracket location
   vector<int> bmap;
+  vector<int> coords(2,0);
 
   for(int n=0 ;n<len;n++) {
     switch(sc[n]) {
       
-      case '[':
-        bmap.push_back(n);
-        break;
+        case '<':
+            src.print("<",coords[0],coords[1]);
+            coords[1]++;
+            break;
+        case '>':
+            src.print(">",coords[0],coords[1]);
+            coords[1]++;
+            break;
+        
+        case '+':
+            src.print("+",coords[0],coords[1]);
+            coords[1]++;
+             break;
+
+        case '-':
+            src.print("-",coords[0],coords[1]);
+            coords[1]++;
+            break;
+        
+        case '.':
+            src.print(".",coords[0],coords[1]);
+            coords[1]++;
+            break;
+
+        
+        case '[':
+            src.print("[",coords[0],coords[1]);
+            coords[1]++;
+            bmap.push_back(n);
+            break;
       
-      case ']':
-        bmap.push_back(n);
-        break;
+        case ']':
+            src.print("]",coords[0],coords[1]);
+            coords[1]++;
+            bmap.push_back(n);
+            break;
       
-      default:
-        break;
+        case '\n':
+            coords[1]=0;
+            coords[0]++;
+            break;
+
+        default:
+            break;
 
   }
   }
+  src.refresh();
 
  
   for(int n=0 ;n<len;n++) {
    
-    iterate(sc,bmap,main,src);
+    iterate(sc,bmap,main);
     usleep(rr);  
   }
 
