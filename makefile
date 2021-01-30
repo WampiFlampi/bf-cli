@@ -1,6 +1,7 @@
 all: bin
 
-bin: main.cpp src src/graphics
+bin: main.cpp engine 
 	g++ -lncurses main.cpp -o bin
+
 
 

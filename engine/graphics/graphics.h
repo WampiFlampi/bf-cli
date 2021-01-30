@@ -26,10 +26,14 @@ void title(Window w) {
 
 	}
 
-void display(vector<int> mem, int pnt, Window  w) {
+void display(vector<int> mem, int pnt, Window  w, Window swin) {
 
 	w.erase();	
 	w.print("^",1,pnt*4);
+
+    
+    swin.print("eeeeeeeeeeeeeee",0,0);
+    swin.refresh();
 
 	for(int i = 0;i<mem.size();i++) {
 			w.print(mem[i],0,i*4);

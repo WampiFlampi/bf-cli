@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 #include <fstream>
-#include "src/engine.h"
+#include "engine/engine.h"
 
 
 using namespace std;
@@ -25,9 +25,9 @@ int main(int argc,char *argv[]) {
   
   
 
-  //iterates through input
+  //engine process
 
-  iterate(size, source);
+  proc(size, source);
 
   
   cout << endl;
