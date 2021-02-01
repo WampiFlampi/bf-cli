@@ -8,9 +8,17 @@
 using namespace std;
 
 void init() {
-	initscr();
-	noecho();
+	
+    initscr();
+    noecho();
 	curs_set(0);
+    
+    assume_default_colors(-1,-1);
+    start_color();
+    init_pair(1,COLOR_GREEN,-1);
+	
+    
+
 }
 
 void end() {
@@ -21,8 +29,7 @@ void end() {
 
 
 void title(Window w) {
-
-		w.print("bf-arch v 1.0.0",1,1);
+        w.print("bf-arch v 1.0.0",1,1);
 		w.refresh();
 
 	}

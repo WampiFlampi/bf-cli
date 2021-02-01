@@ -85,7 +85,7 @@ void proc(int len, char sc[]) {
  
   for(int n=0 ;n<len;n++) {
    
-    iterate(sc,bmap,main);
+    iterate(sc,bmap,main,src);
     usleep(rr);  
   }
 

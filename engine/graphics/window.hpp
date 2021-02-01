@@ -18,6 +18,8 @@ public:
 	void refresh();
 	
 	void erase();
+
+    void color(int sel);
 		
 
 	WINDOW* win;

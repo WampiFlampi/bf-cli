@@ -8,7 +8,6 @@ using namespace std;
 
 Window::Window(int x,int y,int w,int h)
 {
-	
 	this->win = newwin(h,w,y,x);
 	refresh();
 
@@ -34,6 +33,10 @@ void Window::refresh() {
 void Window::erase() {
 		werase(this->win);
 
+}
+
+void Window::color(int sel) {
+    wattrset(this->win,COLOR_PAIR(sel));
 }
 
 						
