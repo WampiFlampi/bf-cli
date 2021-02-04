@@ -13,7 +13,9 @@ public:
 	
 	void print(int in,int y,int x);
 	
-	void print(char *in,int y,int x);
+	void print(char in,int y,int x);
+    
+    void print(const char*in,int y,int x);
 	
 	void refresh();
 	

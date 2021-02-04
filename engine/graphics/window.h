@@ -22,10 +22,13 @@ void Window::print(int in,int y,int x) {
 
 }
 
-void Window::print(char *in,int y,int x) {
-		mvwprintw(this->win,y,x,in);
+void Window::print(char in,int y,int x) {
+		mvwaddch(this->win,y,x,in);
 }
 
+void Window::print(const char*in, int y, int x) {
+        mvwaddstr(this->win,y,x,in);
+}
 void Window::refresh() {
 		wrefresh(this->win);
 

@@ -1,15 +1,6 @@
-#include <iostream>
-#include <bits/stdc++.h>
-#include <unistd.h>
-
 #include "process.h"
 
 using namespace std;
-
-
-//controls speed of animation
-int rr = 40*1000;
-
 
 
 void proc(int len, char sc[]) {
@@ -27,7 +18,6 @@ void proc(int len, char sc[]) {
   title(t);
 	
   //map bracket location
-  vector<int> bmap;
   vector<int> coords(2,0);
 
   for(int n=0 ;n<len;n++) {
@@ -61,13 +51,11 @@ void proc(int len, char sc[]) {
         case '[':
             src.print("[",coords[0],coords[1]);
             coords[1]++;
-            bmap.push_back(n);
             break;
       
         case ']':
             src.print("]",coords[0],coords[1]);
             coords[1]++;
-            bmap.push_back(n);
             break;
       
         case '\n':
@@ -82,12 +70,8 @@ void proc(int len, char sc[]) {
   }
   src.refresh();
 
- 
-  for(int n=0 ;n<len;n++) {
-   
-    iterate(sc,bmap,main,src);
-    usleep(rr);  
-  }
+ iterate(len,sc,main,src); 
+
 
 end();
 }
