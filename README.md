@@ -2,22 +2,29 @@
 
 ![src](https://github.com/WampiFlampi/source/blob/main/bf-crop.png)
 
-brainfuck for arch linux,
+##Official Alpha Release 1.0.0
 
-graphical interface development is offically underway
+##Building
+  Arch Linux:
+    ```cd bf-arch```
+    ```make```
+    
+  Debian Based:
+    ```sudo apt-get install libncurses5 libncurses5-dev```
+    >can't remember if its libncurses5-dev or libncurses5-devel
+    ```cd bf-arch```
+    ```make```
+    
+##Usage
+  Starting:
+    ```./bin /path/to/input.bf```
+    
+  Quitting:
+    ```ctrl c```
+    
+######Coming soon
 
-```git clone https://github.com/WampiFlampi/bf-arch```
-
-```cd /bf-arch```
-
-```make```
-
-
-```./bin```
-
-If you're interested in contributing,
-
-the display function in graphics.h renders one frame per brainfuck instruction,
-
-the function usleep() in engine.h controls the speed of the animation
-
+  1. Single step debugging
+  2. Breakpoints
+    > to avoid watching the entire animation, gets annoying fast
+  3. Light-weight compiler for finished projects
