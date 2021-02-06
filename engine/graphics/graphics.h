@@ -7,7 +7,9 @@
 
 using namespace std;
 
-vector<int> coords(5,0);
+bool base = true;
+
+int nmem;
 
 void init() {
 	
@@ -36,37 +38,35 @@ void title(Window w) {
         w.print("bf-arch v 1.0.0",1,1);
 		w.refresh();
 
-	}
-void instruct(char sc[],int n, Window w) {
+}
+
+
+void instruct(vector<int> my,vector<int> mx,char sc[],int n, Window w) {
      
-    switch(sc[n]) {
-        case '\n':
-            coords[0]++;
-            coords[1]=0;
-            break;
+    if(sc[n] == '\n') {
         
-        default:
-            if (n==0) {
+    }else {
+        switch(base) {
+            case true:
                 w.color(1);
-                w.print(sc[n],coords[0],coords[1]);
-                coords[4] = coords[1];
-                coords[3] = coords[0];
-                coords[1]++;
-            } 
-            else {           
+                w.print(sc[n],my[n],mx[n]);
+                nmem = n;
+                base = false;
+                break;
+
+            default:
                 w.color(1);
-                w.print(sc[n],coords[0],coords[1]);
+                w.print(sc[n],my[n],mx[n]);
                 w.color(0);
-                w.print(sc[coords[5]],coords[3],coords[4]);
-                coords[4] = coords[1];
-                coords[3] = coords[0];
-                coords[5] = n;
-                coords[1]++;
-            }
+                w.print(sc[nmem],my[nmem],mx[nmem]);
+                nmem = n;
+                break;
        }
+    } 
+
+    
+
     w.refresh();
-
-
 
 }
 

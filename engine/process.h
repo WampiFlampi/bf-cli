@@ -15,16 +15,12 @@ int n = 0;
 char out;
 bool flag = false;
 
-void iterate(int size,char sc[], Window win, Window src) {
+void iterate(int size,char sc[],vector<int> my,vector<int> mx, Window win, Window src) {
     
 
 for(int n = 0;n<size;n++) {
 
-    instruct(sc,n,src);
-    if (st.empty() == false) {
-        src.print(st.top(),11,0);
-        src.refresh();   
-    }
+    
 
     switch(flag) {
     
@@ -80,9 +76,9 @@ for(int n = 0;n<size;n++) {
             }
             break;
         }
-
+    instruct(my,mx,sc,n,src);
 	render(mem,point,win);
-    usleep(200000);	
+    usleep(70000);	
   }
  }
 

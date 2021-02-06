@@ -17,46 +17,12 @@ void proc(int len, char sc[]) {
 	
   title(t);
 	
-  //map bracket location
   vector<int> coords(2,0);
+  vector<int> my;
+  vector<int> mx;
 
   for(int n=0 ;n<len;n++) {
     switch(sc[n]) {
-      
-        case '<':
-            src.print("<",coords[0],coords[1]);
-            coords[1]++;
-            break;
-        case '>':
-            src.print(">",coords[0],coords[1]);
-            coords[1]++;
-            break;
-        
-        case '+':
-            src.print("+",coords[0],coords[1]);
-            coords[1]++;
-             break;
-
-        case '-':
-            src.print("-",coords[0],coords[1]);
-            coords[1]++;
-            break;
-        
-        case '.':
-            src.print(".",coords[0],coords[1]);
-            coords[1]++;
-            break;
-
-        
-        case '[':
-            src.print("[",coords[0],coords[1]);
-            coords[1]++;
-            break;
-      
-        case ']':
-            src.print("]",coords[0],coords[1]);
-            coords[1]++;
-            break;
       
         case '\n':
             coords[1]=0;
@@ -64,13 +30,18 @@ void proc(int len, char sc[]) {
             break;
 
         default:
+            src.print(sc[n],coords[0],coords[1]);
+            my.push_back(coords[0]);
+            mx.push_back(coords[1]);
+            coords[1]++;
             break;
 
+    }
   }
-  }
+
   src.refresh();
 
- iterate(len,sc,main,src); 
+ iterate(len,sc,my,mx,main,src); 
 
 
 end();
