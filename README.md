@@ -9,12 +9,14 @@
   Arch Linux:
     
    1. ```cd bf-arch```
-  Debian Based:
-    ```sudo apt-get install libncurses5 libncurses5-dev```
+   2. ```make```
+  
+  Debian Based:f
+   * ```sudo apt-get install libncurses5 libncurses5-dev```
     
-    ```cd bf-arch```
+   * ```cd bf-arch```
     
-    ```make```
+   * ```make```
 ## Usage
   Starting:
     ```./bin /path/to/input.bf```
