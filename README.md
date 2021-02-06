@@ -9,6 +9,7 @@
   Arch Linux:
    * ```cd bf-arch```
    * ```make```
+   
   Debian Based:
    * ```sudo apt-get install libncurses5 libncurses5-dev```
    * ```cd bf-arch```
