@@ -7,9 +7,8 @@
   This project hopes to provide an efficient, bloat free enviroment for developing, debugging, and compiling brainfuck programs
 ## Building
   Arch Linux:
-    ```cd bf-arch```
     
-    ```make```
+    ```cd bf-arch```
   Debian Based:
     ```sudo apt-get install libncurses5 libncurses5-dev```
     
