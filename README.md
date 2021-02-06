@@ -4,7 +4,7 @@
 
 ## Official Alpha Release 1.0.0
   Bf-arch is a simple ncurses implementation of brainfuck for the linux cli.
-  This project is designed with speed and functionality in mind
+  This project hopes to provide an efficient, bloat free enviroment for developing, debugging, and compiling brainfuck programs
 ## Building
   ###### Arch Linux
     ```cd bf-arch```
