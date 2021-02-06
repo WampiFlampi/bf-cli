@@ -3,18 +3,16 @@
 ![src](https://github.com/WampiFlampi/source/blob/main/bf-crop.png)
 
 ## Official Alpha Release 1.0.0
-
+  Bf-arch is a simple ncurses implementation of brainfuck for the linux cli
+  This project is designed with speed and functionality in mind
 ## Building
-  ###### Arch Linux:
-    
+  ###### Arch Linux
     ```cd bf-arch```
     
     ```make```
     
-  ###### Debian Based:
-    
+  ###### Debian Based
     ```sudo apt-get install libncurses5 libncurses5-dev```
-    >can't remember if its libncurses5-dev or libncurses5-devel
     
     ```cd bf-arch```
     
@@ -22,11 +20,9 @@
     
 ## Usage
   Starting:
-  
     ```./bin /path/to/input.bf```
     
   Quitting:
-  
     ```ctrl c```
     
 ###### Coming soon
