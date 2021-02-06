@@ -1,6 +1,6 @@
 # bf-arch
 
-![src](https://github.com/WampiFlampi/source/blob/main/bf-crop.PNG)
+![src](https://github.com/WampiFlampi/source/blob/main/bf-crop.png)
 
 brainfuck for arch linux,
 
