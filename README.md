@@ -6,7 +6,7 @@
   bf-cli is a simple ncurses implementation of brainfuck for the linux cli.
   This project hopes to provide an efficient, bloat free enviroment for developing, debugging, and compiling brainfuck programs
 ## Building
-  -```git clone https://github.com/WampiFlampi/bf-cli```
+  - ```git clone https://github.com/WampiFlampi/bf-cli```
   
   Arch Linux:
    * ```cd bf-cli```
