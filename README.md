@@ -8,7 +8,7 @@
 ## Building
   Arch Linux:
     
-    ```cd bf-arch```
+   1. ```cd bf-arch```
   Debian Based:
     ```sudo apt-get install libncurses5 libncurses5-dev```
     
