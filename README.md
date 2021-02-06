@@ -3,7 +3,7 @@
 ![src](https://github.com/WampiFlampi/source/blob/main/bf-crop.png)
 
 ## Official Alpha Release 1.0.0
-  Bf-arch is a simple ncurses implementation of brainfuck for the linux cli
+  Bf-arch is a simple ncurses implementation of brainfuck for the linux cli.
   This project is designed with speed and functionality in mind
 ## Building
   ###### Arch Linux
