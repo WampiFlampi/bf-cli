@@ -2,9 +2,9 @@
 
 ![src](https://github.com/WampiFlampi/source/blob/main/bf-crop.png)
 
-##Official Alpha Release 1.0.0
+## Official Alpha Release 1.0.0
 
-##Building
+## Building
   Arch Linux:
     ```cd bf-arch```
     ```make```
@@ -15,14 +15,14 @@
     ```cd bf-arch```
     ```make```
     
-##Usage
+## Usage
   Starting:
     ```./bin /path/to/input.bf```
     
   Quitting:
     ```ctrl c```
     
-######Coming soon
+###### Coming soon
 
   1. Single step debugging
   2. Breakpoints
