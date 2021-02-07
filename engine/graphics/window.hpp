@@ -1,6 +1,7 @@
-
 #include <string>
 #include <vector>
+#include <curses.h>
+
 
 using namespace std;
 

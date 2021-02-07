@@ -1,4 +1,5 @@
-#include <bits/stdc++.h>
+#include <stack>
+#include <iostream>
 #include <unistd.h>
 
 #include "graphics/graphics.h"
@@ -6,17 +7,16 @@
 
 using namespace std;
 
-vector<int> mem(10,0);
-stack<int> st;
-
-int point = 0;
-int nav = 0;
-int n = 0;
-char out;
-bool flag = false;
-
 void iterate(int size,char sc[],vector<int> my,vector<int> mx, Window win, Window src) {
-    
+    vector<int> mem(20,0);
+    stack<int> st;
+    int point = 0;
+    int nav = 0;
+    int line = 0;
+    char out;
+    bool flag = false;
+    Window wout(8,35,30,2);
+   
 
 for(int n = 0;n<size;n++) {
 
@@ -55,7 +55,9 @@ for(int n = 0;n<size;n++) {
                         break;
                 case '.':
                         out = mem[point];
-                        cout << out;  
+                        wout.print(out,0,line);
+                        line++;  
+                        wout.refresh();
                         break;
 
                 case '[':

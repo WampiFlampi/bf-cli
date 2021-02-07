@@ -1,6 +1,3 @@
-#include <bits/stdc++.h>
-#include <curses.h>
-
 #include "window.h"
 
 

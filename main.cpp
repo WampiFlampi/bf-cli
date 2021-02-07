@@ -1,4 +1,3 @@
-#include <bits/stdc++.h>
 #include <fstream>
 #include "engine/engine.h"
 
@@ -31,7 +30,6 @@ int main(int argc,char *argv[]) {
 
   
   cout << endl;
-  cout << size;
   return 0;
   
 }

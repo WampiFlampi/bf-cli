@@ -1,6 +1,3 @@
-#include <string>
-#include <vector>
-
 #include "window.hpp"
 
 using namespace std;
