@@ -1,6 +1,5 @@
 #include <stack>
 #include <iostream>
-#include <unistd.h>
 
 #include "graphics/graphics.h"
 
@@ -10,25 +9,28 @@ using namespace std;
 void iterate(int size,char sc[],vector<int> my,vector<int> mx, Window win, Window src) {
     vector<int> mem(20,0);
     stack<int> st;
+    int nest = 0;
     int point = 0;
     int nav = 0;
     int line = 0;
     char out;
-    bool flag = false;
     Window wout(8,35,30,2);
    
 
 for(int n = 0;n<size;n++) {
 
-    
+    instruct(my,mx,sc,n,src);
 
-    switch(flag) {
+
+    switch(nest) {
     
         
-        case true:
+        default:
             switch(sc[n]) {
+                case '[':
+                    nest++;
                 case ']':
-                    flag = false;
+                    nest--;
                     break;
 
                 default:
@@ -37,7 +39,7 @@ for(int n = 0;n<size;n++) {
             break;
         
         
-        default:  
+        case 0:  
             switch(sc[n]) {
 
                  //defining languauge rules
@@ -62,7 +64,7 @@ for(int n = 0;n<size;n++) {
 
                 case '[':
                         if ( mem[point] == 0) {
-                            flag = true;
+                            nest = 1;
 
                         }else {
                             st.push(n);
@@ -78,9 +80,7 @@ for(int n = 0;n<size;n++) {
             }
             break;
         }
-    instruct(my,mx,sc,n,src);
-	render(mem,point,win);
-    usleep(70000);	
+    render(mem,point,win);	
   }
  }
 

@@ -40,7 +40,7 @@ void proc(int len, char sc[]) {
   }
 
   src.refresh();
-
+ nodelay(main.win,true);
  iterate(len,sc,my,mx,main,src); 
 
 

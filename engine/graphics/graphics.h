@@ -1,3 +1,5 @@
+#include <unistd.h>
+
 #include "window.h"
 
 
@@ -8,6 +10,10 @@ bool base = true;
 
 int nmem;
 
+int speed = 70;
+
+bool debug = false;
+
 void init() {
 	
     initscr();
@@ -17,9 +23,7 @@ void init() {
     assume_default_colors(-1,-1);
     start_color();
     init_pair(0,-1,-1);
-    init_pair(1,COLOR_RED,-1);
-
-	
+    init_pair(1,COLOR_RED,-1);	
     
 
 }
@@ -76,6 +80,37 @@ void render(vector<int> mem, int pnt, Window  w) {
 			w.print(mem[i],0,i*4);
 
 	}
-	w.refresh();
+    
+	int ch = wgetch(w.win);
+    
 
-}
+    switch(debug) {
+        case true:
+            switch(ch) {
+                case 113:
+                    nodelay(w.win,true);
+                    debug = false;
+                    break;
+                default:
+                    break;
+
+            }
+            break;
+       
+        default:
+            switch(ch) {
+                case 100:
+                    nodelay(w.win,false);
+                    debug = true;
+                    break;
+                
+                case ERR:
+                    usleep(speed*1000);
+                    break;
+
+            }
+            break;
+    }
+
+    w.refresh();
+} 
