@@ -36,8 +36,11 @@ void end() {
 
 
 void title(Window w) {
-        w.print("bf-arch v 1.0.0",1,1);
-		w.refresh();
+        
+        box(w.win,0,0);
+        w.print("bf-arch v 1.1.0",1,1);
+        w.refresh();
+
 
 }
 

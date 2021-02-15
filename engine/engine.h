@@ -7,17 +7,17 @@ void proc(int len, char sc[]) {
   
   //ncurses initialization
   init();
-  Window main(5,5,90,2);
+  Window main(20,5,80,2);
 
-  Window t(0,0,20,2);
+  Window t(0,0,20,3);
+  
+  Window src(6,9,50,30);
+  box(src.win,0,0);
 
-  Window src(7,7,50,30);
-
-  //native out for bf
 	
   title(t);
 	
-  vector<int> coords(2,0);
+  vector<int> coords(2,1);
   vector<int> my;
   vector<int> mx;
 
@@ -25,7 +25,9 @@ void proc(int len, char sc[]) {
     switch(sc[n]) {
       
         case '\n':
-            coords[1]=0;
+            my.push_back(0);
+            mx.push_back(0);
+            coords[1]=1;
             coords[0]++;
             break;
 

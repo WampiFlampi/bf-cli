@@ -12,9 +12,11 @@ void iterate(int size,char sc[],vector<int> my,vector<int> mx, Window win, Windo
     int nest = 0;
     int point = 0;
     int nav = 0;
-    int line = 0;
-    char out;
-    Window wout(8,35,30,2);
+    int line = 1;
+    char out = 0;
+    Window wout(60,9,50,25);
+    box(wout.win,0,0);
+    wout.refresh();
    
 
 for(int n = 0;n<size;n++) {
@@ -57,7 +59,7 @@ for(int n = 0;n<size;n++) {
                         break;
                 case '.':
                         out = mem[point];
-                        wout.print(out,0,line);
+                        wout.print(out,1,line);
                         line++;  
                         wout.refresh();
                         break;
