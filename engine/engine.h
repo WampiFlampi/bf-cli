@@ -11,7 +11,7 @@ void proc(int len, char sc[]) {
 
   Window t(0,0,20,3);
   
-  Window src(6,9,50,30);
+  Window src(6,9,80,40);
   box(src.win,0,0);
 
 	

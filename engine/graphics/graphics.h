@@ -1,4 +1,5 @@
 #include <unistd.h>
+#include <cmath>
 
 #include "window.h"
 
@@ -12,7 +13,10 @@ int nmem;
 
 int speed = 70;
 
+int adj = 0;
+
 bool debug = false;
+
 
 void init() {
 	
@@ -38,7 +42,7 @@ void end() {
 void title(Window w) {
         
         box(w.win,0,0);
-        w.print("bf-arch v 1.1.0",1,1);
+        w.print("bf-cli v 1.2.0",1,1);
         w.refresh();
 
 
@@ -74,18 +78,29 @@ void instruct(vector<int> my,vector<int> mx,char sc[],int n, Window w) {
 
 }
 
-void render(vector<int> mem, int pnt, Window  w) {
+void render(vector<uint8_t> mem, int pnt, Window  w) {
 
-	w.erase();	
-	w.print("^",1,pnt*4);
+	w.erase(); 
+    
+    if(pnt == 10+adj ) {
+        adj+= 3;
+    }
+    else if(pnt == 0) {
+    }
+    else if(pnt == adj) {
+        adj-= 3;
+    }
 
-	for(int i = 0;i<mem.size();i++) {
-			w.print(mem[i],0,i*4);
+	w.print('^',1,(pnt-adj)*4);
+    
+    
+    	
+    for(int i = adj;i<10+adj;i++) {
+			w.print(mem[i],0,(i-adj)*4);
 
 	}
     
 	int ch = wgetch(w.win);
-    
 
     switch(debug) {
         case true:
