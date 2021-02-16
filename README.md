@@ -1,6 +1,6 @@
 # bf-cli
 
-![src](https://github.com/WampiFlampi/source/blob/main/bf-crop.png)
+![src](https://github.com/WampiFlampi/source/blob/main/bf-alpha1.2.0%20(1).png)
 
 ## Alpha Release 1.2.0
 bf-cli is a simple ncurses implementation of brainfuck for the linux cli.
