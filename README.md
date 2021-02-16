@@ -27,31 +27,33 @@ This project hopes to provide an efficient, bloat free enviroment for developing
 
 ## Building
 Method 1:
-  
-  $ git clone https://github.com/WampiFlampi/bf-cli
-  $ cd bf-cli
-  $ sudo make clean install
-  
+```
+$ git clone https://github.com/WampiFlampi/bf-cli
+$ cd bf-cli
+$ sudo make clean install
+```
 Method 2:
-  
-  $ follow first 2 steps from method 1
-  $ g++ -lncurses main.cpp -o bin
-
->for ubuntu and mint
-
-  $ g++ main.cpp -lncurses -o bin
-
+``` 
+$ follow first 2 steps from method 1
+$ g++ -lncurses main.cpp -o bin
+```
+for ubuntu and mint
+```
+$ g++ main.cpp -lncurses -o bin
+```
 ## Usage
   Starting:
-   
+   ```
    $ bf /path/to/input.bf
-      or
+   ```
+   or
+   ```
    $ ./bin /path/to/input.bf
-    
+   ``` 
   Quitting:
-   
+   ```
    $ ctrl-c
-    
+   ``` 
 ## Coming soon
   - Speed Control and other quality of life
   - Animation Extension
