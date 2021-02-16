@@ -2,30 +2,53 @@
 
 ![src](https://github.com/WampiFlampi/source/blob/main/bf-crop.png)
 
-## Official Alpha Release 1.0.0
-  bf-cli is a simple ncurses implementation of brainfuck for the linux cli.
-  This project hopes to provide an efficient, bloat free enviroment for developing, debugging, and compiling brainfuck programs
-## Building
-  - ```git clone https://github.com/WampiFlampi/bf-cli```
+## Alpha Release 1.2.0
+bf-cli is a simple ncurses implementation of brainfuck for the linux cli.
+
+This project hopes to provide an efficient, bloat free enviroment for developing, debugging, and compiling brainfuck programs
+
+## Features
+- Fully functional graphical interface
+- Single Step Debugging
+## Keybinds
   
-  Arch Linux:
-   * ```cd bf-cli```
-   * ```make```
-   
-  Debian Based:
-   * ```sudo apt-get install libncurses5 libncurses5-dev```
-   * ```cd bf-cli```
-   * ```make```
+| Key         | Action           |
+| ----------- | -----------------|
+| d           | Enter Debug Mode |
+| Down        | Exit Debug Mode  |
+
+## Deps
+
+| Distro         | Installation command              |
+| -------------- | --------------------------------- |
+| Ubuntu/Debian  | `apt-get install libncurses5-dev` |
+| Arch Linux     | _comes by default_                |
+
+
+## Building
+Method 1:
+  $ git clone https://github.com/WampiFlampi/bf-cli
+  $ cd bf-cli
+  $ sudo make clean install
+Method 2:
+  $ follow first 2 steps from method 1
+  $ g++ -lncurses main.cpp -o bin
+  >on ubuntu and mint
+  $ g++ main.cpp -lncurses -o bin
+
 ## Usage
   Starting:
-   - ```./bin /path/to/input.bf```
+   $ bf /path/to/input.bf
+      or
+   $ ./bin /path/to/input.bf
     
   Quitting:
-   - ```ctrl c```
+   $ ctrl-c
     
 ## Coming soon
-
-  - Single step debugging
-  - Breakpoints
-  > to avoid watching the entire animation, gets annoying fast
+  - Speed Control and other quality of life
+  - Animation Extension
+  - Breakpoints/input traversal
   - Light-weight compiler for finished projects
+## Special Thanks
+  Check out https://github.com/alexdantas/yetris, the code is really well commented and easy to understand, It has been an enormous help in developing bf-cli, thank you
