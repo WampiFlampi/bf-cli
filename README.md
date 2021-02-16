@@ -15,7 +15,7 @@ This project hopes to provide an efficient, bloat free enviroment for developing
 | Key         | Action           |
 | ----------- | -----------------|
 | d           | Enter Debug Mode |
-| Down        | Exit Debug Mode  |
+| q           | Exit Debug Mode  |
 
 ## Deps
 
@@ -27,22 +27,29 @@ This project hopes to provide an efficient, bloat free enviroment for developing
 
 ## Building
 Method 1:
+  
   $ git clone https://github.com/WampiFlampi/bf-cli
   $ cd bf-cli
   $ sudo make clean install
+  
 Method 2:
+  
   $ follow first 2 steps from method 1
   $ g++ -lncurses main.cpp -o bin
-  >on ubuntu and mint
+
+>for ubuntu and mint
+
   $ g++ main.cpp -lncurses -o bin
 
 ## Usage
   Starting:
+   
    $ bf /path/to/input.bf
       or
    $ ./bin /path/to/input.bf
     
   Quitting:
+   
    $ ctrl-c
     
 ## Coming soon
