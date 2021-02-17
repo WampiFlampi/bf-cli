@@ -1,1 +1,0 @@
-brainfuck: main.c:48: scan: Assertion `idx >= 0' failed.

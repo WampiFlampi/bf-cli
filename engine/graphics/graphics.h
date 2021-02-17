@@ -84,11 +84,13 @@ void render(vector<uint8_t> mem, int pnt, Window  w) {
     
     if(pnt == 10+adj ) {
         adj+= 3;
+        usleep(speed*1000);
     }
     else if(pnt == 0) {
     }
     else if(pnt == adj) {
         adj-= 3;
+        usleep(speed*1000);
     }
 
 	w.print('^',1,(pnt-adj)*4);
@@ -121,7 +123,14 @@ void render(vector<uint8_t> mem, int pnt, Window  w) {
                     nodelay(w.win,false);
                     debug = true;
                     break;
-                
+                case 107:
+                  if(speed>30) {
+                  speed-=15;
+                  }
+                  break;
+                case 106:
+                  speed+=15;
+                  break;
                 case ERR:
                     usleep(speed*1000);
                     break;
