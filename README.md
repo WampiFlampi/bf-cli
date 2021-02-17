@@ -2,7 +2,7 @@
 
 ![src](https://github.com/WampiFlampi/source/blob/main/bf-alpha1.2.0%20(1).png)
 
-## Alpha Release 1.2.0
+## Alpha Release 1.2.1
 bf-cli is a simple ncurses implementation of brainfuck for the linux cli.
 
 This project hopes to provide an efficient, bloat free enviroment for developing, debugging, and compiling brainfuck programs
@@ -16,6 +16,8 @@ This project hopes to provide an efficient, bloat free enviroment for developing
 | ----------- | -----------------|
 | d           | Enter Debug Mode |
 | q           | Exit Debug Mode  |
+| j           | Decrease Speed   |
+| k           | Increase Speed   |
 
 ## Deps
 
