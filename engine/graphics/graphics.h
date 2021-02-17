@@ -42,7 +42,7 @@ void end() {
 void title(Window w) {
         
         box(w.win,0,0);
-        w.print("bf-cli v 1.2.0",1,1);
+        w.print("bf-cli v 1.2.1",1,1);
         w.refresh();
 
 
