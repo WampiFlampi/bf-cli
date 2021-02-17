@@ -57,7 +57,6 @@ $ g++ main.cpp -lncurses -o bin
    $ ctrl-c
    ``` 
 ## Coming soon
-  - Speed Control and other quality of life
   - Animation Extension
   - Breakpoints/input traversal
   - Light-weight compiler for finished projects
