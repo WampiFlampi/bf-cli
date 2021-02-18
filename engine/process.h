@@ -32,6 +32,7 @@ for(int n = 0;n<size;n++) {
             switch(sc[n]) {
                 case '[':
                     nest++;
+                    break;
                 case ']':
                     nest--;
                     break;
