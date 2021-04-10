@@ -56,7 +56,7 @@ $ g++ main.cpp -lncurses -o bin
    ```
    $ ctrl-c
    ``` 
-## Coming soon
+## On Indeterminate Hiatus While I learn stuff
   - Animation Extension
   - Breakpoints/input traversal
   - Light-weight compiler for finished projects
